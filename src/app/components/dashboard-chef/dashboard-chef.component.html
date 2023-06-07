@@ -1,0 +1,22 @@
+<app-banner title="Dashboard Plats"></app-banner>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pt of plats">
+            <th scope="row">{{pt.id}}</th>
+            <td>{{pt.name}}</td>
+            <td>{{pt.description}}</td>
+            <td>{{pt.price}}</td>
+            <td><button type="button" class="btn btn-primary">Display</button></td>
+            
+        </tr>
+    </tbody>
+</table>

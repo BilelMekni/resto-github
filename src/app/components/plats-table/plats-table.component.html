@@ -1,0 +1,23 @@
+<app-banner title="Plats Table"></app-banner>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of plats">
+        <th scope="row">{{p._id}}</th>
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.description}}</td>
+        <td><button type="button" class="btn btn-primary"(click)="goToDisplay(p._id)">Display</button></td>
+        <td><button type="button" class="btn btn-warning" (click)="goToEdit(p._id)">Edit</button></td>
+        <td><button type="button" class="btn btn-danger"(click)="deletePlats(p._id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,51 @@
+<app-banner title="Login"></app-banner>
+<section class="contact-section section_padding">
+  <div class="container">
+  
+  </div>
+</section>
+<div class="row justify-content-center">
+    <div class="col-12">
+      <h2 class="text-center mb-3 pb-3">LOGIN</h2>
+    </div>
+    <div class="col-lg-8">
+      <form [formGroup]="loginForm">
+        <div class="form-group">
+          
+          <div class="col-12">
+            <div class="form-group">
+              <input class="form-control" formControlName="email"  type="email" 
+                onblur="this.placeholder = 'Enter Subject'" placeholder='Email'>
+            </div>
+            <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].touched ||
+            signupForm.controls['email'].dirty)">
+            <div *ngIf="loginForm.controls['email'].errors.required" class="red">
+               Email is required
+            </div>
+            <div *ngIf="loginForm.controls['email'].errors.email" class="red">
+             Email is Not valide
+            </div>
+           
+
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group">
+              <input class="form-control" formControlName="pwd" type="password" 
+                onblur="this.placeholder = 'Enter Password'" placeholder='Password'>
+            </div>
+            <div *ngIf="loginForm.controls['pwd'].invalid && (loginForm.controls['pwd'].touched ||
+            loginForm.controls['pwd'].dirty)">
+            <div *ngIf="loginForm.controls['pwd'].errors.required" class="red">
+               Email is required
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button (click)="login()" [disabled]="loginForm.invalid" type="submit" class="button button-contactForm btn_4">LOGIN</button>
+        </div>
+      </form>
+    </div>
+  
+  </div>

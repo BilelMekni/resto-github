@@ -1,0 +1,25 @@
+<app-banner title="Chefs Table"></app-banner>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Experience</th>
+      <th scope="col">Speciality</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ch of chefs">
+      <th scope="row">{{ch._id}}</th>
+      <td>{{ch.name}}</td>
+      <td>{{ch.experience}}</td>
+      <td>{{ch.Speciality}}</td>
+      <td><button type="button" class="btn btn-primary">Display</button></td>
+      <td><button type="button" class="btn btn-warning" (click)="goToEdit(ch._id)">Edit</button></td>
+      <td><button (click)="deleteChefs(ch._id)" type="button" class="btn btn-danger">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+

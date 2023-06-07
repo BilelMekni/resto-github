@@ -1,0 +1,46 @@
+<app-banner title="Admin"></app-banner>
+
+<!-- <section class="food_menu gray_bg">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-12">
+        <div class="col-lg-6">
+          <div class="nav nav-tabs food_menu_nav" id="myTab" role="tablist">
+            <a class="active" href="plats" aria-controls="Special" aria-selected="false">Plats <img
+                src="assets/img/icon/play.svg" alt="play"></a>
+            <a href="chefs" role="tab" aria-controls="Breakfast" aria-selected="false">Chefs <img
+                src="assets/img/icon/play.svg" alt="play"></a>
+            <a href="users" role="tab" aria-controls="users" aria-selected="false">Users <img
+                src="assets/img/icon/play.svg" alt="play"></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Plats</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Chefs</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Users</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="plats-table">
+    <app-plats-table></app-plats-table>
+</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="chefs-table">
+    <app-chefs-table></app-chefs-table>
+  </div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="users-table">
+    <app-users-table></app-users-table>
+  </div>
+</div>
+

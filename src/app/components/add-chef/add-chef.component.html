@@ -1,0 +1,36 @@
+<app-banner [title]="formTitle"></app-banner>
+  <section class="contact-section section_padding">
+    <div class="container">
+    
+    </div>
+  </section>
+<div class="row justify-content-center">
+    <div class="col-12">
+      <h2 class="text-center mb-3 pb-3">ADD CHEF</h2>
+    </div>
+    <div class="col-lg-8">
+      <form #chefForm="ngForm" (ngSubmit)="addChef()" >
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <input class="form-control"  [(ngModel)]="chef.name" [ngModelOptions]="{standalone: true}"  type="text"    placeholder='Enter name chef'>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group">
+              <input class="form-control" [(ngModel)]="chef.experience" [ngModelOptions]="{standalone: true}"  type="text"  placeholder='Enter Experience'>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group">
+              <input class="form-control" [(ngModel)]="chef.Speciality" [ngModelOptions]="{standalone: true}" type="text"   placeholder='Enter Speciality'>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="button button-contactForm btn_4">{{formTitle}}</button>
+        </div>
+      </form>
+    </div>
+   
+  </div>
